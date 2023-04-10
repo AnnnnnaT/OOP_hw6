@@ -1,12 +1,12 @@
 package Model;
 
+import java.lang.reflect.Array;
 import java.util.*;
 
 import Model.Possibilities.AddNote;
 import Model.Possibilities.Save;
-import Model.Possibilities.ShowAll;
 
-public class Notebook implements AddNote, Save, ShowAll {
+public class Notebook implements AddNote, Save {
     ArrayList<String> notebook;
 
     public Notebook() {
@@ -25,9 +25,9 @@ public class Notebook implements AddNote, Save, ShowAll {
 
     }
 
-    @Override
-    public void showAll() {
-        System.out.println(Arrays.toString(notebook.toArray()));
+    public Object[] notebookToArray() {         
+        return notebook.toArray();
     }
 
+    
 }
