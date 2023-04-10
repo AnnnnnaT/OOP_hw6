@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 import Model.Notebook;
 import Presenter.Presenter;
 import View.Menu;
@@ -9,7 +11,10 @@ public class main {
         Notebook notebook = new Notebook();
         View ui = new Menu();
         Presenter presenter = new Presenter(ui, notebook);
-        presenter.start();
+        ui.start();
+
+        ArrayList<String> list = new ArrayList<>();
+        list.toArray();
 
     }
 }

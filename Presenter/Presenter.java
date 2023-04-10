@@ -24,26 +24,10 @@ public class Presenter {
     }
 
     void showAll(){
-        view.showAllNotes();
-        notebook.showAll();
-        
+        view.showAllNotes();        
     }
 
-    public void start(){
     
-        switch (view.start()) {
-            case 1:
-                addNote();
-                break;
-            case 2:
-                saveNote();
-                break;
-            case 3:
-                showAll();
-            default:
-                break;
-        }
-    }
 
 
 }
